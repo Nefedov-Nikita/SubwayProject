@@ -37,7 +37,7 @@ public class MapView extends SurfaceView implements SurfaceHolder.Callback {
     private boolean isMapLoadFinish = false;
     private List<MapBaseLayer> layers; // all layers
     private MapLayer mapLayer;
-    private float minZoom = 0.18f;
+    private float minZoom = 0.12f;
     private float maxZoom = 0.8f;
     private PointF startTouch = new PointF();
     private PointF lastMove = new PointF();

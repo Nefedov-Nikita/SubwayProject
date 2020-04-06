@@ -274,8 +274,20 @@ public final class TestData {
         marks.add(new PointF(1039, 778)); // Старая Деревня
         marks.add(new PointF(1039, 1020)); // Крестовский Остров
         marks.add(new PointF(1039, 1262)); // Чкаловская
+        marks.add(new PointF(1187, 1555)); // Спортивная
+        marks.add(new PointF(1505, 1875)); // Адмиралтейская
         marks.add(new PointF(2300, 2667)); // Обводной канал
         marks.add(new PointF(2302, 2833)); // Волковская
+        marks.add(new PointF(2302, 3007)); // Бухарестская
+        marks.add(new PointF(2302, 3186)); // Международная
+        marks.add(new PointF(2302, 3361)); // Проспект Славы
+        marks.add(new PointF(2302, 3529)); // Дунайская
+        marks.add(new PointF(2302, 3698)); // Шушары
+
+
+
+
+
 
 
 
@@ -490,10 +502,31 @@ public final class TestData {
                 marksName.add("Чкаловская");
             }
             if(i == 60) {
-                marksName.add("Обводной канал");
+                marksName.add("Спортивная");
             }
             if(i == 61) {
+                marksName.add("Адмиралтейская");
+            }
+            if(i == 62) {
+                marksName.add("Обводной канал");
+            }
+            if(i == 63) {
                 marksName.add("Волковская");
+            }
+            if(i == 64) {
+                marksName.add("Бухарестская");
+            }
+            if(i == 65) {
+                marksName.add("Международная");
+            }
+            if(i == 66) {
+                marksName.add("Проспект Славы");
+            }
+            if(i == 67) {
+                marksName.add("Дунайская");
+            }
+            if(i == 68) {
+                marksName.add("Шушары");
             }
         }
         return marksName;
@@ -689,10 +722,31 @@ public final class TestData {
                 marksDesc.add("Чкаловская");
             }
             if(i == 60) {
-                marksDesc.add("Обводной канал");
+                marksDesc.add("Спортивная");
             }
             if(i == 61) {
+                marksDesc.add("Адмиралтейская");
+            }
+            if(i == 62) {
+                marksDesc.add("Обводной канал");
+            }
+            if(i == 63) {
                 marksDesc.add("Волковская");
+            }
+            if(i == 64) {
+                marksDesc.add("Бухарестская");
+            }
+            if(i == 65) {
+                marksDesc.add("Международная");
+            }
+            if(i == 66) {
+                marksDesc.add("Проспект Славы");
+            }
+            if(i == 67) {
+                marksDesc.add("Дунайская");
+            }
+            if(i == 68) {
+                marksDesc.add("Шушары");
             }
         }
         return marksDesc;
