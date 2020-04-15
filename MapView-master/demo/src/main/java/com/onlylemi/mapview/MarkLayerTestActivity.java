@@ -34,6 +34,8 @@ public class MarkLayerTestActivity extends AppCompatActivity {
 
     String nameStation;
     String stationDesc;
+    String firtsSt;
+    String secSt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,13 +83,33 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     }
     public void ShowPopup (View v) {
         TextView txtclose;
+        Button otButton;
+        Button sudButton;
         Button infobutton;
         myDialog.setContentView(R.layout.popup);
         txtclose = (TextView) myDialog.findViewById(R.id.txtclose);
         infobutton = (Button) myDialog.findViewById(R.id.info);
+        otButton = (Button) myDialog.findViewById(R.id.Ot);
+        sudButton = (Button) myDialog.findViewById(R.id.Sud);
         txtclose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+        otButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                firtsSt = nameStation;
+                myDialog.dismiss();
+            }
+        });
+
+        sudButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                secSt = nameStation;
+                ShortestPath.GraphFind(firtsSt,secSt);
                 myDialog.dismiss();
             }
         });
