@@ -179,6 +179,8 @@ class Graph {
                 if (this.name == End) {
                     EndDis = this.dist;
                     System.out.printf(" Итог: (%d)", EndDis);
+                    MarkLayerTestActivity c1 = new MarkLayerTestActivity();
+                    c1.distance = EndDis;
                 }
             }
         }

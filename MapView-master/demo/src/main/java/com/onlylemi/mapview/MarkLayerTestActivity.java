@@ -31,11 +31,13 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     TextView metroname;
     TextView metronameinf;
     TextView infoDesc;
+    TextView timeDist;
 
     String nameStation;
     String stationDesc;
     String firtsSt;
     String secSt;
+    static int distance = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +45,9 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mark_layer_test);
         myDialog = new Dialog(this);
         myDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+        if (distance != 0) {
+            ShowTime(null);
+        }
 
         mapView = (MapView) findViewById(R.id.mapview);
         Bitmap bitmap = null;
@@ -100,17 +105,38 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         otButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                firtsSt = nameStation;
-                myDialog.dismiss();
+                if (secSt == null) {
+                    firtsSt = nameStation;
+                    myDialog.dismiss();
+                }
+                else {
+                    myDialog.dismiss();
+                    firtsSt = nameStation;
+                    ShortestPath.GraphFind(firtsSt,secSt);
+                    finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(getIntent());
+                    overridePendingTransition(0, 0);
+                }
             }
         });
 
         sudButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                secSt = nameStation;
-                ShortestPath.GraphFind(firtsSt,secSt);
-                myDialog.dismiss();
+                if (firtsSt == null) {
+                    secSt = nameStation;
+                    myDialog.dismiss();
+                }
+                else {
+                    myDialog.dismiss();
+                    secSt = nameStation;
+                    ShortestPath.GraphFind(firtsSt, secSt);
+                    finish();
+                    overridePendingTransition(0, 0);
+                    startActivity(getIntent());
+                    overridePendingTransition(0, 0);
+                }
             }
         });
 
@@ -135,6 +161,22 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         infoDesc.setText(stationDesc);
         txtcloseinf = (TextView) myDialog.findViewById(R.id.txtcloseinf);
         txtcloseinf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
+    public void ShowTime (View v) {
+        TextView txtclosetime;
+        myDialog.setContentView(R.layout.time);
+        timeDist = (TextView) myDialog.findViewById(R.id.timer);
+        timeDist.setText(distance+" Мин.");
+        txtclosetime = (TextView) myDialog.findViewById(R.id.txtclosetime);
+        txtclosetime.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 myDialog.dismiss();

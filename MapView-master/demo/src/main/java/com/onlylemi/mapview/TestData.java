@@ -457,10 +457,10 @@ public final class TestData {
                 marksName.add("Василеостровская");
             }
             if(i == 45) {
-                marksName.add("ПлощадьАлександра Невского - 1");
+                marksName.add("Площадь Александра Невского - 1");
             }
             if(i == 46) {
-                marksName.add("ПлощадьАлександра Невского - 2");
+                marksName.add("Площадь Александра Невского - 2");
             }
             if(i == 47) {
                 marksName.add("Елизаровская");
@@ -496,7 +496,7 @@ public final class TestData {
                 marksName.add("Старая Деревня");
             }
             if(i == 58) {
-                marksName.add("Крестовский Остров");
+                marksName.add("Крестовский остров");
             }
             if(i == 59) {
                 marksName.add("Чкаловская");
