@@ -45,10 +45,6 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mark_layer_test);
         myDialog = new Dialog(this);
         myDialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
-        if (distance != 0) {
-            ShowTime(null);
-        }
-
         mapView = (MapView) findViewById(R.id.mapview);
         Bitmap bitmap = null;
         try {
@@ -86,6 +82,15 @@ public class MarkLayerTestActivity extends AppCompatActivity {
 
         });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (distance != 0) {
+            ShowTime(null);
+        }
+    }
+
     public void ShowPopup (View v) {
         TextView txtclose;
         Button otButton;
@@ -113,10 +118,7 @@ public class MarkLayerTestActivity extends AppCompatActivity {
                     myDialog.dismiss();
                     firtsSt = nameStation;
                     ShortestPath.GraphFind(firtsSt,secSt);
-                    finish();
-                    overridePendingTransition(0, 0);
-                    startActivity(getIntent());
-                    overridePendingTransition(0, 0);
+                    onResume();
                 }
             }
         });
@@ -132,10 +134,7 @@ public class MarkLayerTestActivity extends AppCompatActivity {
                     myDialog.dismiss();
                     secSt = nameStation;
                     ShortestPath.GraphFind(firtsSt, secSt);
-                    finish();
-                    overridePendingTransition(0, 0);
-                    startActivity(getIntent());
-                    overridePendingTransition(0, 0);
+                    onResume();
                 }
             }
         });
