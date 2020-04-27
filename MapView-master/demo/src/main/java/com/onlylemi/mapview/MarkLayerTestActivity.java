@@ -170,10 +170,16 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     }
 
     public void ShowTime (View v) {
+        TextView otStation;
+        TextView doStation;
         TextView txtclosetime;
         myDialog.setContentView(R.layout.time);
         timeDist = (TextView) myDialog.findViewById(R.id.timer);
         timeDist.setText(distance+" Мин.");
+        otStation = (TextView) myDialog.findViewById(R.id.otStation);
+        doStation = (TextView) myDialog.findViewById(R.id.doStation);
+        otStation.setText(firtsSt);
+        doStation.setText(secSt);
         txtclosetime = (TextView) myDialog.findViewById(R.id.txtclosetime);
         txtclosetime.setOnClickListener(new View.OnClickListener() {
             @Override
