@@ -1,13 +1,17 @@
 package com.onlylemi.mapview;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.PointF;
 import android.graphics.drawable.ColorDrawable;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,7 +21,17 @@ import com.onlylemi.mapview.library.MapView;
 import com.onlylemi.mapview.library.MapViewListener;
 import com.onlylemi.mapview.library.layer.MarkLayer;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.List;
 
 import android.view.View;
@@ -92,6 +106,7 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     }
 
     public void ShowPopup (View v) {
+        final background bg = new background(this);
         TextView txtclose;
         Button otButton;
         Button sudButton;
@@ -143,7 +158,7 @@ public class MarkLayerTestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myDialog.dismiss();
-                ShowInfo(null);
+                bg.execute(nameStation);
             }
         });
 
@@ -151,13 +166,14 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         myDialog.show();
     }
 
-    public void ShowInfo (View v) {
+    public void ShowInfo (View v, String desc) {
         TextView txtcloseinf;
         myDialog.setContentView(R.layout.station_inf);
         metronameinf = (TextView) myDialog.findViewById(R.id.metronameinf);
         metronameinf.setText(nameStation);
         infoDesc = (TextView) myDialog.findViewById(R.id.infoDesc);
-        infoDesc.setText(stationDesc);
+        infoDesc.setText(desc);
+        //infoDesc.setText(stationDesc);
         txtcloseinf = (TextView) myDialog.findViewById(R.id.txtcloseinf);
         txtcloseinf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -189,5 +205,70 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         myDialog.show();
+    }
+
+    public class background extends AsyncTask<String, Void,String> {
+
+        AlertDialog dialog;
+        Context context;
+        String result = "";
+        public Boolean login = false;
+        public background(Context context)
+        {
+            this.context = context;
+        }
+
+        @Override
+        protected void onPreExecute() {
+
+        }
+        @Override
+        protected void onPostExecute(String s) {
+
+            ShowInfo(null, s);
+            //Log.d("@@@@@@@@@@@@@@@@@",s);
+        }
+
+        @Override
+        public String doInBackground(String... voids) {
+            String user = voids[0];
+
+            String connstr = "http://subway-project.000webhostapp.com/info.php";
+
+            try {
+                URL url = new URL(connstr);
+                HttpURLConnection http = (HttpURLConnection) url.openConnection();
+                http.setRequestMethod("POST");
+                http.setDoInput(true);
+                http.setDoOutput(true);
+
+                OutputStream ops = http.getOutputStream();
+                BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(ops,"UTF-8"));
+                String data = URLEncoder.encode("user","UTF-8")+"="+URLEncoder.encode(user,"UTF-8");
+                writer.write(data);
+                writer.flush();
+                writer.close();
+                ops.close();
+
+                InputStream ips = http.getInputStream();
+                BufferedReader reader = new BufferedReader(new InputStreamReader(ips,"UTF-8"));
+                String line ="";
+                while ((line = reader.readLine()) != null)
+                {
+                    result += line;
+                }
+                reader.close();
+                ips.close();
+                http.disconnect();
+                return result;
+
+            } catch (MalformedURLException e) {
+                result = e.getMessage();
+            } catch (IOException e) {
+                result = e.getMessage();
+            }
+
+            return result;
+        }
     }
 }
