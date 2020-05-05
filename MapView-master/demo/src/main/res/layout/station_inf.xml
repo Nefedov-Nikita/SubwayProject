@@ -33,9 +33,17 @@
     <TextView
         android:id="@+id/infoDesc"
         android:layout_width="match_parent"
-        android:layout_height="352dp"
+        android:layout_height="300dp"
         android:text="Информация о станции"
         android:textSize="14sp" />
+
+    <Button
+        android:id="@+id/yanMap"
+        android:drawableLeft="@drawable/ic_map"
+        android:layout_width="154dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:text="На карте" />
 
 
 </LinearLayout>

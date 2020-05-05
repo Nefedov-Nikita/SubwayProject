@@ -532,224 +532,125 @@ public final class TestData {
         return marksName;
     }
 
-    public static List<String> getMarksDesc() {
-        List<String> marksDesc = new ArrayList<>();
+    public static List<Float> getLatit() { // Ширина
+        List<Float> marksLatit = new ArrayList<>();
         for (int i = 0; i < getMarks().size(); i++) {
+
             if(i == 0) {
-                marksDesc.add("Время открытия: 05:45" + "\n" + "Время закрытия: 00:00" + "\n" + "\n" + "Справка о станции:" + "\n" + "Станция открыта 22 декабря 2006 года на действующем участке «Проспект Просвещения» — депо «Выборгское». Является конечной станцией Московско-Петроградской линии, следующей за станцией «Проспект Просвещения».");
+                marksLatit.add(60.067047751979f); // Парнас
             }
             if(i == 1) {
-                marksDesc.add("Время открытия: 05:35" + "\n" + "Время закрытия: 00:40"  + "\n" + "\n" + "Справка о станции:");
+                marksLatit.add(60.05144582091243f); // Проспект Просвещения
             }
             if(i == 2) {
-                marksDesc.add("Information");
+                marksLatit.add(60.03713075734995f); // Озерки
             }
             if(i == 3) {
-                marksDesc.add("Information");
+                marksLatit.add(60.01672125745171f); // Удельная
             }
             if(i == 4) {
-                marksDesc.add("Information");
+                marksLatit.add(60.00251725755505f); // Пионерская
             }
             if(i == 5) {
-                marksDesc.add("Information");
+                marksLatit.add(59.985511257629376f); // Черная речка
             }
             if(i == 6) {
-                marksDesc.add("Information");
-            }
-            if(i == 6) {
-                marksDesc.add("Горьковская");
+                marksLatit.add(59.96639425768185f); // Петроградская
             }
             if(i == 7) {
-                marksDesc.add("Гостиный двор");
-            }
-            if(i == 7) {
-                marksDesc.add("Невский проспект");
+                marksLatit.add(59.95614675776341f); // Горьковская
             }
             if(i == 8) {
-                marksDesc.add("Садовая");
+                marksLatit.add(59.93406425784771f); // Гостиный двор
             }
             if(i == 9) {
-                marksDesc.add("Спасская");
+                marksLatit.add(59.935430257861775f); // Невский проспект
             }
             if(i == 10) {
-                marksDesc.add("Сенная площадь");
+                marksLatit.add(59.926854757960534f); // Садовая
             }
             if(i == 11) {
-                marksDesc.add("Технологический институт - 2");
+                marksLatit.add(59.926854757960534f); // Спасская
             }
             if(i == 12) {
-                marksDesc.add("Технологический институт - 1");
+                marksLatit.add(59.926854757960534f); // Сенная площадь
             }
             if(i == 13) {
-                marksDesc.add("Фрунзенская");
+                marksLatit.add(59.91649201692559f); // Технологический институт - 2
             }
             if(i == 14) {
-                marksDesc.add("Фрунзенская");
+                marksLatit.add(59.91649201692559f); // Технологический институт - 1
             }
             if(i == 15) {
-                marksDesc.add("Фрунзенская");
+                marksLatit.add(59.90617825805923f); // Фрунзенская
             }
             if(i == 16) {
-                marksDesc.add("Фрунзенская");
+                marksLatit.add(59.891489258157236f); // Московские ворота
             }
-            if(i == 17) {
-                marksDesc.add("Фрунзенская");
-            }
-            if(i == 18) {
-                marksDesc.add("Фрунзенская");
-            }
-            if(i == 19) {
-                marksDesc.add("Фрунзенская");
-            }
-            if(i == 20) {
-                marksDesc.add("Девяткино");
-            }
-            if(i == 21) {
-                marksDesc.add("Гражданка");
-            }
-            if(i == 22) {
-                marksDesc.add("Академическая");
-            }
-            if(i == 23) {
-                marksDesc.add("Политех");
-            }
-            if(i == 24) {
-                marksDesc.add("Площадь мужества");
-            }
-            if(i == 25) {
-                marksDesc.add("Лесная");
-            }
-            if(i == 26) {
-                marksDesc.add("Выборгская");
-            }
-            if(i == 27) {
-                marksDesc.add("Площадь Ленина");
-            }
-            if(i == 28) {
-                marksDesc.add("Чернышевская");
-            }
-            if(i == 29) {
-                marksDesc.add("Площадь Восстания");
-            }
-            if(i == 30) {
-                marksDesc.add("Маяковская");
-            }
-            if(i == 31) {
-                marksDesc.add("Владимирская");
-            }
-            if(i == 32) {
-                marksDesc.add("Достаевская");
-            }
-            if(i == 33) {
-                marksDesc.add("Пушкинская");
-            }
-            if(i == 34) {
-                marksDesc.add("Звенигородская");
-            }
-            if(i == 35) {
-                marksDesc.add("Балтийская");
-            }
-            if(i == 36) {
-                marksDesc.add("Нарвская");
-            }
-            if(i == 37) {
-                marksDesc.add("Кировский завод");
-            }
-            if(i == 38) {
-                marksDesc.add("Автово");
-            }
-            if(i == 39) {
-                marksDesc.add("Ленинский проспект");
-            }
-            if(i == 40) {
-                marksDesc.add("Проспект Ветеранов");
-            }
-            if(i == 41) {
-                marksDesc.add("Беговая");
-            }
-            if(i == 42) {
-                marksDesc.add("Новокрестовская");
-            }
-            if(i == 43) {
-                marksDesc.add("Приморская");
-            }
-            if(i == 44) {
-                marksDesc.add("Василеостровская");
-            }
-            if(i == 45) {
-                marksDesc.add("Площадь Александра Невского - 1");
-            }
-            if(i == 46) {
-                marksDesc.add("Площадь Александра Невского - 2");
-            }
-            if(i == 47) {
-                marksDesc.add("Елизаровская");
-            }
-            if(i == 48) {
-                marksDesc.add("Ломоносовская");
-            }
-            if(i == 49) {
-                marksDesc.add("Пролетарская");
-            }
-            if(i == 50) {
-                marksDesc.add("Обухово");
-            }
-            if(i == 51) {
-                marksDesc.add("Рыбацкое");
-            }
-            if(i == 52) {
-                marksDesc.add("Новочеркасская");
-            }
-            if(i == 53) {
-                marksDesc.add("Ладожская");
-            }
-            if(i == 54) {
-                marksDesc.add("Площадь Большевиков");
-            }
-            if(i == 55) {
-                marksDesc.add("Улица Дыбенко");
-            }
-            if(i == 56) {
-                marksDesc.add("Комендантский проспект");
-            }
-            if(i == 57) {
-                marksDesc.add("Старая Деревня");
-            }
-            if(i == 58) {
-                marksDesc.add("Крестовский Остров");
-            }
-            if(i == 59) {
-                marksDesc.add("Чкаловская");
-            }
-            if(i == 60) {
-                marksDesc.add("Спортивная");
-            }
-            if(i == 61) {
-                marksDesc.add("Адмиралтейская");
-            }
-            if(i == 62) {
-                marksDesc.add("Обводной канал");
-            }
-            if(i == 63) {
-                marksDesc.add("Волковская");
-            }
-            if(i == 64) {
-                marksDesc.add("Бухарестская");
-            }
-            if(i == 65) {
-                marksDesc.add("Международная");
-            }
-            if(i == 66) {
-                marksDesc.add("Проспект Славы");
-            }
-            if(i == 67) {
-                marksDesc.add("Дунайская");
-            }
-            if(i == 68) {
-                marksDesc.add("Шушары");
-            }
+
         }
-        return marksDesc;
+        return marksLatit;
+    }
+
+    public static List<Float> getLongit() { // Долгота
+        List<Float> marksLongit = new ArrayList<>();
+        for (int i = 0; i < getMarks().size(); i++) {
+
+            if(i == 0) {
+                marksLongit.add(30.33417477667447f); // Парнас
+            }
+            if(i == 1) {
+                marksLongit.add(30.332516216170035f); // Проспект Просвещения
+            }
+            if(i == 2) {
+                marksLongit.add(30.321877499999978f); // Озерки
+            }
+            if(i == 3) {
+                marksLongit.add(30.315894999999998f); // Удельная
+            }
+            if(i == 4) {
+                marksLongit.add(30.296662499999943f); // Пионерская
+            }
+            if(i == 5) {
+                marksLongit.add(30.300830499999986f); // Черная речка
+            }
+            if(i == 6) {
+                marksLongit.add(30.31150249999997f); // Петроградская
+            }
+            if(i == 7) {
+                marksLongit.add(30.3188325f); // Горьковская
+            }
+            if(i == 8) {
+                marksLongit.add(30.33275649999999f); // Гостиный двор
+            }
+            if(i == 9) {
+                marksLongit.add(30.32727649999998f); // Невский проспект
+            }
+            if(i == 10) {
+                marksLongit.add(30.319182499999982f); // Садовая
+            }
+            if(i == 11) {
+                marksLongit.add(30.319182499999982f); // Спасская
+            }
+            if(i == 12) {
+                marksLongit.add(30.319182499999982f); // Сенная площадь
+            }
+            if(i == 13) {
+                marksLongit.add(30.318585380950886f); // Технологический институт - 2
+            }
+            if(i == 14) {
+                marksLongit.add(30.318585380950886f); // Технологический институт - 1
+            }
+            if(i == 15) {
+                marksLongit.add(30.317529999999977f); // Фрунзенская
+            }
+            if(i == 16) {
+                marksLongit.add(30.317970499999973f); // Московские ворота
+            }
+
+
+        }
+        return marksLongit;
     }
 
 }

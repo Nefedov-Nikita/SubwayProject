@@ -3,6 +3,7 @@ package com.onlylemi.mapview;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -48,7 +49,8 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     TextView timeDist;
 
     String nameStation;
-    String stationDesc;
+    float latit;
+    float longit;
     String firtsSt;
     String secSt;
     static int distance = 0;
@@ -72,7 +74,8 @@ public class MarkLayerTestActivity extends AppCompatActivity {
             public void onMapLoadSuccess() {
                 List<PointF> marks = TestData.getMarks();
                 final List<String> marksName = TestData.getMarksName();
-                final List<String> marksDesc = TestData.getMarksDesc();
+                final List<Float> marksLatit = TestData.getLatit();
+                final List<Float> marksLongit = TestData.getLongit();
                 markLayer = new MarkLayer(mapView, marks, marksName);
                 markLayer.setMarkIsClickListener(new MarkLayer.MarkIsClickListener() {
                     @Override
@@ -80,7 +83,9 @@ public class MarkLayerTestActivity extends AppCompatActivity {
                         //Toast.makeText(getApplicationContext(), marksName.get(num) + "", Toast.LENGTH_SHORT).show();
                         ShowPopup(null);
                         nameStation = marksName.get(num);
-                        stationDesc = marksDesc.get(num);
+                        latit = marksLatit.get(num);
+                        longit = marksLongit.get(num);
+                        //Toast.makeText(getApplicationContext(), longit +"COOLL", Toast.LENGTH_SHORT).show();
                         metroname = (TextView) myDialog.findViewById(R.id.metroname);
                         metroname.setText(marksName.get(num));
                     }
@@ -167,8 +172,10 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     }
 
     public void ShowInfo (View v, String desc) {
+        Button mapbutton;
         TextView txtcloseinf;
         myDialog.setContentView(R.layout.station_inf);
+        mapbutton = (Button) myDialog.findViewById(R.id.yanMap);
         metronameinf = (TextView) myDialog.findViewById(R.id.metronameinf);
         metronameinf.setText(nameStation);
         infoDesc = (TextView) myDialog.findViewById(R.id.infoDesc);
@@ -179,6 +186,18 @@ public class MarkLayerTestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myDialog.dismiss();
+            }
+        });
+
+        mapbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                distance = 0;
+                Intent intent = new Intent(getApplicationContext(), YandexMap.class);
+                intent.putExtra("latit",latit);
+                intent.putExtra("longit",longit);
+                myDialog.dismiss();
+                startActivity(intent);
             }
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
