@@ -54,6 +54,8 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     String firtsSt;
     String secSt;
     static int distance = 0;
+    public String sqlQuery = "";
+    public int numQuery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,6 +165,8 @@ public class MarkLayerTestActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 myDialog.dismiss();
+                sqlQuery = "http://subway-project.000webhostapp.com/info.php";
+                numQuery = 1;
                 bg.execute(nameStation);
             }
         });
@@ -172,10 +176,13 @@ public class MarkLayerTestActivity extends AppCompatActivity {
     }
 
     public void ShowInfo (View v, String desc) {
+        final background bg = new background(this);
         Button mapbutton;
+        Button landmarkbutton;
         TextView txtcloseinf;
         myDialog.setContentView(R.layout.station_inf);
         mapbutton = (Button) myDialog.findViewById(R.id.yanMap);
+        landmarkbutton = (Button) myDialog.findViewById(R.id.landmark);
         metronameinf = (TextView) myDialog.findViewById(R.id.metronameinf);
         metronameinf.setText(nameStation);
         infoDesc = (TextView) myDialog.findViewById(R.id.infoDesc);
@@ -197,6 +204,35 @@ public class MarkLayerTestActivity extends AppCompatActivity {
                 intent.putExtra("longit",longit);
                 myDialog.dismiss();
                 startActivity(intent);
+            }
+        });
+
+        landmarkbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
+                sqlQuery = "http://subway-project.000webhostapp.com/landmark.php";
+                numQuery = 2;
+                bg.execute(nameStation);
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
+    public void ShowLand (View v, String desc) {
+        TextView txtcloseland;
+        TextView landmarktext;
+        myDialog.setContentView(R.layout.landmark_inf);
+        landmarktext = (TextView) myDialog.findViewById(R.id.landmarkText);
+        metronameinf = (TextView) myDialog.findViewById(R.id.metronameinf);
+        metronameinf.setText(nameStation);
+        landmarktext.setText(desc);
+        txtcloseland = (TextView) myDialog.findViewById(R.id.txtcloseland);
+        txtcloseland.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myDialog.dismiss();
             }
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -245,20 +281,28 @@ public class MarkLayerTestActivity extends AppCompatActivity {
             String sub = "webhost";
             if (s.indexOf(sub) != -1) {
                 s = "Нет доступа к сети";
-                ShowInfo(null, s);
+                if (numQuery == 1) {
+                    ShowInfo(null, s);
+                }
+                if (numQuery == 2) {
+                    ShowLand(null, s);
+                }
             }
             else {
-                ShowInfo(null, s);
+                if (numQuery == 1) {
+                    ShowInfo(null, s);
+                }
+                if (numQuery == 2) {
+                    ShowLand(null, s);
+                }
             }
-            //ShowInfo(null, s);
 
         }
 
         @Override
         public String doInBackground(String... voids) {
             String user = voids[0];
-
-            String connstr = "http://subway-project.000webhostapp.com/info.php";
+            String connstr = sqlQuery;
 
             try {
                 URL url = new URL(connstr);

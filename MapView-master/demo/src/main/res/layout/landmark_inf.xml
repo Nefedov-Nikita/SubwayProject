@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/txtcloseinf"
+        android:id="@+id/txtcloseland"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:textColor="@color/colorDarkGrey"
@@ -31,30 +31,11 @@
         android:gravity="center"/>
 
     <TextView
-        android:id="@+id/infoDesc"
+        android:id="@+id/landmarkText"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:text="Информация о станции"
+        android:text="Информация о местах"
         android:textSize="14sp" />
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:orientation="horizontal">
-    <Button
-        android:id="@+id/yanMap"
-        android:drawableLeft="@drawable/ic_map"
-        android:layout_width="145dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:text="На карте" />
 
-    <Button
-        android:id="@+id/landmark"
-        android:drawableLeft="@drawable/ic_land"
-        android:layout_width="145dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center"
-        android:text="Места" />
-    </LinearLayout>
 
 </LinearLayout>
