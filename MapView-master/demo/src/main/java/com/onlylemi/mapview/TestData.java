@@ -284,30 +284,7 @@ public final class TestData {
         marks.add(new PointF(2302, 3529)); // Дунайская
         marks.add(new PointF(2302, 3698)); // Шушары
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        marks.add(new PointF(2793, 2020)); // Лиговский проспект
 
         return marks;
     }
@@ -336,203 +313,207 @@ public final class TestData {
             if(i == 6) {
                 marksName.add("Петроградская");
             }
-            if(i == 6) {
+            if(i == 7) {
                 marksName.add("Горьковская");
             }
-            if(i == 7) {
+            if(i == 8) {
                 marksName.add("Гостиный двор");
             }
-            if(i == 7) {
+            if(i == 9) {
                 marksName.add("Невский проспект");
             }
-            if(i == 8) {
+            if(i == 10) {
                 marksName.add("Садовая");
             }
-            if(i == 9) {
+            if(i == 11) {
                 marksName.add("Спасская");
             }
-            if(i == 10) {
+            if(i == 12) {
                 marksName.add("Сенная площадь");
             }
-            if(i == 11) {
+            if(i == 13) {
                 marksName.add("Технологический институт - 2");
             }
-            if(i == 12) {
+            if(i == 14) {
                 marksName.add("Технологический институт - 1");
             }
-            if(i == 13) {
+            if(i == 15) {
                 marksName.add("Фрунзенская");
             }
-            if(i == 14) {
+            if(i == 16) {
                 marksName.add("Московские ворота");
             }
-            if(i == 15) {
+            if(i == 17) {
                 marksName.add("Электросила");
             }
-            if(i == 16) {
+            if(i == 18) {
                 marksName.add("Парк Победы");
             }
-            if(i == 17) {
+            if(i == 19) {
                 marksName.add("Московская");
             }
-            if(i == 18) {
+            if(i == 20) {
                 marksName.add("Звездная");
             }
-            if(i == 19) {
+            if(i == 21) {
                 marksName.add("Купчино");
             }
-            if(i == 20) {
+            if(i == 22) {
                 marksName.add("Девяткино");
             }
-            if(i == 21) {
+            if(i == 23) {
                 marksName.add("Гражданский проспект");
             }
-            if(i == 22) {
+            if(i == 24) {
                 marksName.add("Академическая");
             }
-            if(i == 23) {
+            if(i == 25) {
                 marksName.add("Политехническая");
             }
-            if(i == 24) {
+            if(i == 26) {
                 marksName.add("Площадь Мужества");
             }
-            if(i == 25) {
+            if(i == 27) {
                 marksName.add("Лесная");
             }
-            if(i == 26) {
+            if(i == 28) {
                 marksName.add("Выборгская");
             }
-            if(i == 27) {
+            if(i == 29) {
                 marksName.add("Площадь Ленина");
             }
-            if(i == 28) {
+            if(i == 30) {
                 marksName.add("Чернышевская");
             }
-            if(i == 29) {
+            if(i == 31) {
                 marksName.add("Площадь Восстания");
             }
-            if(i == 30) {
+            if(i == 32) {
                 marksName.add("Маяковская");
             }
-            if(i == 31) {
+            if(i == 33) {
                 marksName.add("Владимирская");
             }
-            if(i == 32) {
+            if(i == 34) {
                 marksName.add("Достаевская");
             }
-            if(i == 33) {
+            if(i == 35) {
                 marksName.add("Пушкинская");
             }
-            if(i == 34) {
+            if(i == 36) {
                 marksName.add("Звенигородская");
             }
-            if(i == 35) {
+            if(i == 37) {
                 marksName.add("Балтийская");
             }
-            if(i == 36) {
+            if(i == 38) {
                 marksName.add("Нарвская");
             }
-            if(i == 37) {
+            if(i == 39) {
                 marksName.add("Кировский завод");
             }
-            if(i == 38) {
+            if(i == 40) {
                 marksName.add("Автово");
             }
-            if(i == 39) {
+            if(i == 41) {
                 marksName.add("Ленинский проспект");
             }
-            if(i == 40) {
+            if(i == 42) {
                 marksName.add("Проспект Ветеранов");
             }
-            if(i == 41) {
+            if(i == 43) {
                 marksName.add("Беговая");
             }
-            if(i == 42) {
+            if(i == 44) {
                 marksName.add("Новокрестовская");
             }
-            if(i == 43) {
+            if(i == 45) {
                 marksName.add("Приморская");
             }
-            if(i == 44) {
+            if(i == 46) {
                 marksName.add("Василеостровская");
             }
-            if(i == 45) {
+            if(i == 47) {
                 marksName.add("Площадь Александра Невского - 1");
             }
-            if(i == 46) {
+            if(i == 48) {
                 marksName.add("Площадь Александра Невского - 2");
             }
-            if(i == 47) {
+            if(i == 49) {
                 marksName.add("Елизаровская");
             }
-            if(i == 48) {
+            if(i == 50) {
                 marksName.add("Ломоносовская");
             }
-            if(i == 49) {
+            if(i == 51) {
                 marksName.add("Пролетарская");
             }
-            if(i == 50) {
+            if(i == 52) {
                 marksName.add("Обухово");
             }
-            if(i == 51) {
+            if(i == 53) {
                 marksName.add("Рыбацкое");
             }
-            if(i == 52) {
+            if(i == 54) {
                 marksName.add("Новочеркасская");
             }
-            if(i == 53) {
+            if(i == 55) {
                 marksName.add("Ладожская");
             }
-            if(i == 54) {
-                marksName.add("Площадь Большевиков");
-            }
-            if(i == 55) {
-                marksName.add("Улица Дыбенко");
-            }
             if(i == 56) {
-                marksName.add("Комендантский проспект");
+                marksName.add("Проспект Большевиков");
             }
             if(i == 57) {
-                marksName.add("Старая Деревня");
+                marksName.add("Улица Дыбенко");
             }
             if(i == 58) {
-                marksName.add("Крестовский остров");
+                marksName.add("Комендантский проспект");
             }
             if(i == 59) {
-                marksName.add("Чкаловская");
+                marksName.add("Старая Деревня");
             }
             if(i == 60) {
-                marksName.add("Спортивная");
+                marksName.add("Крестовский остров");
             }
             if(i == 61) {
-                marksName.add("Адмиралтейская");
+                marksName.add("Чкаловская");
             }
             if(i == 62) {
-                marksName.add("Обводной канал");
+                marksName.add("Спортивная");
             }
             if(i == 63) {
-                marksName.add("Волковская");
+                marksName.add("Адмиралтейская");
             }
             if(i == 64) {
-                marksName.add("Бухарестская");
+                marksName.add("Обводный канал");
             }
             if(i == 65) {
-                marksName.add("Международная");
+                marksName.add("Волковская");
             }
             if(i == 66) {
-                marksName.add("Проспект Славы");
+                marksName.add("Бухарестская");
             }
             if(i == 67) {
-                marksName.add("Дунайская");
+                marksName.add("Международная");
             }
             if(i == 68) {
+                marksName.add("Проспект Славы");
+            }
+            if(i == 69) {
+                marksName.add("Дунайская");
+            }
+            if(i == 70) {
                 marksName.add("Шушары");
+            }
+
+            if(i == 71) {
+                marksName.add("Лиговский проспект");
             }
         }
         return marksName;
     }
 
-    public static List<Float> getLatit() { // Ширина
+    public static List<Float> getLatit() { // Широта
         List<Float> marksLatit = new ArrayList<>();
         for (int i = 0; i < getMarks().size(); i++) {
 
@@ -587,6 +568,173 @@ public final class TestData {
             if(i == 16) {
                 marksLatit.add(59.891489258157236f); // Московские ворота
             }
+            if(i == 17) {
+                marksLatit.add(59.87915925815478f); // Электросила
+            }
+            if(i == 18) {
+                marksLatit.add(59.86626425827121f); // Парк Победы
+            }
+            if(i == 19) {
+                marksLatit.add(59.85201825837377f); // Московская
+            }
+            if(i == 20) {
+                marksLatit.add(59.83309525842788f); // Звездная
+            }
+            if(i == 21) {
+                marksLatit.add(59.82968075845504f); // Купчино
+            }
+            if(i == 22) {
+                marksLatit.add(60.0503362572988f); // Девяткино
+            }
+            if(i == 23) {
+                marksLatit.add(60.03491475732705f); // Гражданский проспект
+            }
+            if(i == 24) {
+                marksLatit.add(60.0127187574729f); // Академическая
+            }
+            if(i == 25) {
+                marksLatit.add(60.00881025749501f); // Политехническая
+            }
+            if(i == 26) {
+                marksLatit.add(59.99959275758734f); // Площадь мужества
+            }
+            if(i == 27) {
+                marksLatit.add(59.98476925762171f); // Лесная
+            }
+            if(i == 28) {
+                marksLatit.add(59.97100575766698f); // Выборгская
+            }
+            if(i == 29) {
+                marksLatit.add(59.95675075776964f); // Площадь Ленина
+            }
+            if(i == 30) {
+                marksLatit.add(59.94458966527931f); // Чернышевская
+            }
+            if(i == 31) {
+                marksLatit.add(59.93164643575204f); // Площадь Восстания
+            }
+            if(i == 32) {
+                marksLatit.add(59.93138625794489f); // Маяковская
+            }
+            if(i == 33) {
+                marksLatit.add(59.92742325790398f); // Владимирская
+            }
+            if(i == 34) {
+                marksLatit.add(59.92816109205559f); // Достаевская
+            }
+            if(i == 35) {
+                marksLatit.add(59.92068575802175f); // Пушкинская
+            }
+            if(i == 36) {
+                marksLatit.add(59.922391024122305f); // Звенигородская
+            }
+            if(i == 37) {
+                marksLatit.add(59.90720725806984f); // Балтийская
+            }
+            if(i == 38) {
+                marksLatit.add(59.901111758069334f); // Нарвская
+            }
+            if(i == 39) {
+                marksLatit.add(59.87963775822212f); // Кировский завод
+            }
+            if(i == 40) {
+                marksLatit.add(59.86730825828204f); // Автово
+            }
+            if(i == 41) {
+                marksLatit.add(59.850703258360184f); // Ленинский проспект
+            }
+            if(i == 42) {
+                marksLatit.add(59.841947258394555f); // Проспект ветеранов
+            }
+            if(i == 43) {
+                marksLatit.add(59.988000757592594f); // Беговая
+            }
+            if(i == 44) {
+                marksLatit.add(59.971879257738536f); // Новокрестовская
+            }
+            if(i == 45) {
+                marksLatit.add(59.94845575780893f); // Приморская
+            }
+            if(i == 46) {
+                marksLatit.add(59.94252475787264f); // Василеостровская
+            }
+            if(i == 47) {
+                marksLatit.add(59.924284757934f); // Площадь Александра невского 1
+            }
+            if(i == 48) {
+                marksLatit.add(59.9236041086335f); // Площадь Александра невского 2
+            }
+            if(i == 49) {
+                marksLatit.add(59.896643258085625f); // Елизаровская
+            }
+            if(i == 50) {
+                marksLatit.add(59.87733475819836f); // Ломоносовская
+            }
+            if(i == 51) {
+                marksLatit.add(59.865121258259435f); // Пролетарская
+            }
+            if(i == 52) {
+                marksLatit.add(59.84861025833851f); // Обухово
+            }
+            if(i == 53) {
+                marksLatit.add(59.830915258405426f); // Рыбацкое
+            }
+            if(i == 54) {
+                marksLatit.add(59.92891125791937f); // Новочеркасская
+            }
+            if(i == 55) {
+                marksLatit.add(59.93242775789322f); // Ладожская
+            }
+            if(i == 56) {
+                marksLatit.add(59.919888819117915f); // Проспект Большевиков
+            }
+            if(i == 57) {
+                marksLatit.add(59.90743725807225f); // Улица Дыбенко
+            }
+            if(i == 58) {
+                marksLatit.add(60.00854925749241f); // Комендантский проспект
+            }
+            if(i == 59) {
+                marksLatit.add(59.98934175760642f); // Старая деревня
+            }
+            if(i == 60) {
+                marksLatit.add(59.97179375767512f); // Крестовский остров
+            }
+            if(i == 61) {
+                marksLatit.add(59.96095825775063f); // Чкаловская
+            }
+            if(i == 62) {
+                marksLatit.add(59.95019075782691f); // Спортивная
+            }
+            if(i == 63) {
+                marksLatit.add(59.93598475792993f); // Адмиралтейская
+            }
+            if(i == 64) {
+                marksLatit.add(59.914709757959976f); // Обводный канал
+            }
+            if(i == 65) {
+                marksLatit.add(59.8959982580789f); // Волковская
+            }
+            if(i == 66) {
+                marksLatit.add(59.88365625820125f); // Бухарестская
+            }
+            if(i == 67) {
+                marksLatit.add(59.870203758249495f); // Международная
+            }
+            if(i == 68) {
+                marksLatit.add(59.85660925829629f); // Проспект Славы
+            }
+            if(i == 69) {
+                marksLatit.add(59.83986325837304f); // Дунайская
+            }
+            if(i == 70) {
+                marksLatit.add(59.8200377584802f); // Шушары
+            }
+            if(i == 71) {
+                marksLatit.add(59.92073525795981f); // Лиговский проспект
+            }
+
+
 
         }
         return marksLatit;
@@ -647,6 +795,172 @@ public final class TestData {
             if(i == 16) {
                 marksLongit.add(30.317970499999973f); // Московские ворота
             }
+            if(i == 17) {
+                marksLongit.add(30.31869749999995f); // Электросила
+            }
+            if(i == 18) {
+                marksLongit.add(30.321886499999962f); // Парк победы
+            }
+            if(i == 19) {
+                marksLongit.add(30.322398499999927f); // Московская
+            }
+            if(i == 20) {
+                marksLongit.add(30.34941150000002f); // Звездная
+            }
+            if(i == 21) {
+                marksLongit.add(30.375516500000014f); // Купчино
+            }
+            if(i == 22) {
+                marksLongit.add(30.442611499999998f); // Девяткино
+            }
+            if(i == 23) {
+                marksLongit.add(30.418275999999917f); // Гражданский проспект
+            }
+            if(i == 24) {
+                marksLongit.add(30.396132499999954f); // Академическая
+            }
+            if(i == 25) {
+                marksLongit.add(30.370898499999996f); // Политехническая
+            }
+            if(i == 26) {
+                marksLongit.add(30.36647049999997f); // Площадь мужества
+            }
+            if(i == 27) {
+                marksLongit.add(30.344353499999972f); // Лесная
+            }
+            if(i == 28) {
+                marksLongit.add(30.34730050000002f); // Выборгская
+            }
+            if(i == 29) {
+                marksLongit.add(30.355672499999994f); // Площадь Ленина
+            }
+            if(i == 30) {
+                marksLongit.add(30.359860923912485f); // Чернышевская
+            }
+            if(i == 31) {
+                marksLongit.add(30.36054379625235f); // Площадь Восстания
+            }
+            if(i == 32) {
+                marksLongit.add(30.355313500000026f); // Маяковская
+            }
+            if(i == 33) {
+                marksLongit.add(30.34829750000002f); // Владимирская
+            }
+            if(i == 34) {
+                marksLongit.add(30.34627912760608f); // Достаевская
+            }
+            if(i == 35) {
+                marksLongit.add(30.330124499999915f); // Пушкинская
+            }
+            if(i == 36) {
+                marksLongit.add(30.33583833640139f); // Звенигородская
+            }
+            if(i == 37) {
+                marksLongit.add(30.299716499999985f); // Балтийская
+            }
+            if(i == 38) {
+                marksLongit.add(30.27500349999995f); // Нарвская
+            }
+            if(i == 39) {
+                marksLongit.add(30.26196050000003f); // Кировский завод
+            }
+            if(i == 40) {
+                marksLongit.add(30.26140349999994f); // Автово
+            }
+            if(i == 41) {
+                marksLongit.add(30.268401500000028f); // Ленинский проспект
+            }
+            if(i == 42) {
+                marksLongit.add(30.251899499999993f); // Проспект ветеранов
+            }
+            if(i == 43) {
+                marksLongit.add(30.20259949999999f); // Беговая
+            }
+            if(i == 44) {
+                marksLongit.add(30.211941999999972f); // Новокрестовская
+            }
+            if(i == 45) {
+                marksLongit.add(30.234633499999966f); // Приморская
+            }
+            if(i == 46) {
+                marksLongit.add(30.278246499999973f); // Василеостровская
+            }
+            if(i == 47) {
+                marksLongit.add(30.385226999999922f); // Площадь Александра невского 1
+            }
+            if(i == 48) {
+                marksLongit.add(30.383574652913097f); // Площадь Александра невского 2
+            }
+            if(i == 49) {
+                marksLongit.add(30.423773499999964f); // Елизаровская
+            }
+            if(i == 50) {
+                marksLongit.add(30.441686500000028f); // Ломоносовская
+            }
+            if(i == 51) {
+                marksLongit.add(30.470315499999977f); // Пролетарская
+            }
+            if(i == 52) {
+                marksLongit.add(30.45781049999992f); // Обухово
+            }
+            if(i == 53) {
+                marksLongit.add(30.50038199999997f); // Рыбацкое
+            }
+            if(i == 54) {
+                marksLongit.add(30.41147549999996f); // Новочеркасская
+            }
+            if(i == 55) {
+                marksLongit.add(30.43919749999996f); // Ладожская
+            }
+            if(i == 56) {
+                marksLongit.add(30.46678550634517f); // Проспект Большевиков
+            }
+            if(i == 57) {
+                marksLongit.add(30.483358999999936f); // Улица Дыбенко
+            }
+            if(i == 58) {
+                marksLongit.add(30.25866349999997f); // Комендантский проспект
+            }
+            if(i == 59) {
+                marksLongit.add(30.25516000000002f); // Старая деревня
+            }
+            if(i == 60) {
+                marksLongit.add(30.259372999999965f); // Крестовский остров
+            }
+            if(i == 61) {
+                marksLongit.add(30.292179499999953f); // Чкаловская
+            }
+            if(i == 62) {
+                marksLongit.add(30.288334499999966f); // Спортивная
+            }
+            if(i == 63) {
+                marksLongit.add(30.315077499999987f); // Адмиралтейская
+            }
+            if(i == 64) {
+                marksLongit.add(30.349698499999985f); // Обводный канал
+            }
+            if(i == 65) {
+                marksLongit.add(30.358214499999995f); // Волковская
+            }
+            if(i == 66) {
+                marksLongit.add(30.36953350000002f); // Бухарестская
+            }
+            if(i == 67) {
+                marksLongit.add(30.379289499999945f); // Международная
+            }
+            if(i == 68) {
+                marksLongit.add(30.395440499999992f); // Проспект Славы
+            }
+            if(i == 69) {
+                marksLongit.add(30.410864999999976f); // Дунайская
+            }
+            if(i == 70) {
+                marksLongit.add(30.432864499999905f); // Шушары
+            }
+            if(i == 71) {
+                marksLongit.add(30.355178499999923f); // Лиговский проспект
+            }
+
 
 
         }

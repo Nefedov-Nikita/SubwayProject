@@ -180,7 +180,6 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         metronameinf.setText(nameStation);
         infoDesc = (TextView) myDialog.findViewById(R.id.infoDesc);
         infoDesc.setText(desc);
-        //infoDesc.setText(stationDesc);
         txtcloseinf = (TextView) myDialog.findViewById(R.id.txtcloseinf);
         txtcloseinf.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -243,9 +242,16 @@ public class MarkLayerTestActivity extends AppCompatActivity {
         }
         @Override
         protected void onPostExecute(String s) {
+            String sub = "webhost";
+            if (s.indexOf(sub) != -1) {
+                s = "Нет доступа к сети";
+                ShowInfo(null, s);
+            }
+            else {
+                ShowInfo(null, s);
+            }
+            //ShowInfo(null, s);
 
-            ShowInfo(null, s);
-            //Log.d("@@@@@@@@@@@@@@@@@",s);
         }
 
         @Override
