@@ -111,6 +111,12 @@ public class MarkLayerTestActivity extends AppCompatActivity {
             ShowTime(null);
         }
     }
+    public void onDestroy() {
+        moveTaskToBack(true);
+        super.onDestroy();
+        System.runFinalizersOnExit(true);
+        System.exit(0);
+    }
 
     public void ShowPopup (View v) {
         final background bg = new background(this);

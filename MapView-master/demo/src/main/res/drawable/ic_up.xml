@@ -2,10 +2,10 @@
     android:viewportWidth="513" android:width="30dp" xmlns:android="http://schemas.android.com/apk/res/android">
     <path android:fillColor="#00000000"
         android:pathData="M181.625,198.926L257.219,123.332L332.812,198.926"
-        android:strokeColor="#656565" android:strokeLineCap="round"
+        android:strokeColor="#FFFFFF" android:strokeLineCap="round"
         android:strokeLineJoin="round" android:strokeWidth="48"/>
     <path android:fillColor="#00000000"
         android:pathData="M257.312,143.555L257.312,390.555"
-        android:strokeColor="#656565" android:strokeLineCap="round"
+        android:strokeColor="#FFFFFF" android:strokeLineCap="round"
         android:strokeLineJoin="round" android:strokeWidth="48"/>
 </vector>
