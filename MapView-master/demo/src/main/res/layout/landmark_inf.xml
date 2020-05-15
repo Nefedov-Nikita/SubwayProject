@@ -7,7 +7,6 @@
     android:padding="5dp"
     android:layout_gravity="center">
 
-
     <TextView
         android:id="@+id/txtcloseland"
         android:layout_width="30dp"
@@ -30,12 +29,27 @@
         android:layout_gravity="center"
         android:gravity="center"/>
 
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
     <TextView
         android:id="@+id/landmarkText"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="match_parent"
         android:text="Информация о местах"
         android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+    </ScrollView>
 
 
 </LinearLayout>

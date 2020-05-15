@@ -30,12 +30,26 @@
         android:layout_gravity="center"
         android:gravity="center"/>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
     <TextView
         android:id="@+id/infoDesc"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="match_parent"
         android:text="Информация о станции"
         android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="50dp"
