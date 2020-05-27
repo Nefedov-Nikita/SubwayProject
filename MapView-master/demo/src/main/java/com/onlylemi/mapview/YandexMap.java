@@ -20,12 +20,12 @@ public class YandexMap extends AppCompatActivity {
 
         MapKitFactory.setApiKey(MAPKIT_API_KEY);
         MapKitFactory.initialize(this);
-        // Создание MapView.
+
         setContentView(R.layout.yandex_map);
         super.onCreate(savedInstanceState);
         mapView = (MapView)findViewById(R.id.mapview);
 
-        // Перемещение камеры в центр Санкт-Петербурга.
+
         mapView.getMap().move(
                 new CameraPosition(TARGET_LOCATION, 17f, 0.0f, 0.0f),
                 new Animation(Animation.Type.SMOOTH, 5),
@@ -35,7 +35,6 @@ public class YandexMap extends AppCompatActivity {
 
     @Override
     protected void onStop() {
-        // Вызов onStop нужно передавать инстансам MapView и MapKit.
         mapView.onStop();
         MapKitFactory.getInstance().onStop();
         super.onStop();
@@ -43,7 +42,6 @@ public class YandexMap extends AppCompatActivity {
 
     @Override
     protected void onStart() {
-        // Вызов onStart нужно передавать инстансам MapView и MapKit.
         super.onStart();
         MapKitFactory.getInstance().onStart();
         mapView.onStart();
