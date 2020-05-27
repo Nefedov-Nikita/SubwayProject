@@ -26,10 +26,12 @@ public class YandexMap extends AppCompatActivity {
         mapView = (MapView)findViewById(R.id.mapview);
 
 
-        mapView.getMap().move(
-                new CameraPosition(TARGET_LOCATION, 17f, 0.0f, 0.0f),
-                new Animation(Animation.Type.SMOOTH, 5),
-                null);
+       // mapView.getMap().move(
+               // new CameraPosition(TARGET_LOCATION, 17f, 0.0f, 0.0f),
+               // new Animation(Animation.Type.SMOOTH, 5),
+                //null);
+
+        mapView.getMap().move(new CameraPosition(TARGET_LOCATION, 17f, 0.0f, 0.0f));
 
     }
 
