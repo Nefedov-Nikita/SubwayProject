@@ -199,7 +199,7 @@ public final class TestData {
                 marksName.add("Владимирская");
             }
             if(i == 34) {
-                marksName.add("Достаевская");
+                marksName.add("Достоевская");
             }
             if(i == 35) {
                 marksName.add("Пушкинская");
