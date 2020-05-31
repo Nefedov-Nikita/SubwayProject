@@ -111,6 +111,13 @@ public class MarkLayerTestActivity extends AppCompatActivity {
             ShowTime(null);
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
+    }
+    
     public void onDestroy() {
         moveTaskToBack(true);
         super.onDestroy();
