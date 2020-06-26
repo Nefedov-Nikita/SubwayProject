@@ -16,4 +16,4 @@ MapKit: https://github.com/yandexmobile/yandexmapkit-android
 
 email: nefedof300@gmail.com
 
-GitHub: https://github.com/Privet-Medvet
+GitHub: https://github.com/Nefedov-Nikita
